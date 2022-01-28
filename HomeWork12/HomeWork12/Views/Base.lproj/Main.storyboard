@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYJ-h1-LuF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstVC" customModule="HomeWork12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-8W-Kr5">
+                                <rect key="frame" x="25" y="262" width="364" height="426"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk0-XJ-o4L">
+                                        <rect key="frame" x="158.5" y="0.0" width="47.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-y5-u6k">
+                                        <rect key="frame" x="90" y="80" width="184" height="37"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Go to VC by Seque">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToSecond" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwF-sv-vpy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNj-wH-9Rc">
+                                        <rect key="frame" x="102.5" y="167" width="159.5" height="37"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Go to VC on XIB">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goTothird" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pM-ns-CnA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoF-mG-H3A">
+                                        <rect key="frame" x="22.5" y="254" width="319.5" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Go to VC on separated Storyboard without Seque" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToFourth" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifZ-aJ-6nc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPo-PX-RYb">
+                                        <rect key="frame" x="22.5" y="365" width="319.5" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Go to VC on separated Storyboard with Seque" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="7fq-zu-HQb" kind="show" id="2jh-yq-GPv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ehn-8W-Kr5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="SZd-9v-4d1"/>
+                            <constraint firstItem="Ehn-8W-Kr5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T6D-kd-jAr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehn-8W-Kr5" secondAttribute="trailing" constant="25" id="fBF-qZ-92b"/>
+                            <constraint firstItem="Ehn-8W-Kr5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="jsA-Sm-Bfz"/>
+                            <constraint firstItem="Ehn-8W-Kr5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="qqO-ka-NUu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehn-8W-Kr5" secondAttribute="trailing" constant="25" id="wDf-h1-0AR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QNn-Ff-Fvk"/>
+                    <connections>
+                        <outlet property="texstLbl" destination="Vk0-XJ-o4L" id="pYg-W0-Lzx"/>
+                        <segue destination="eKH-4v-P88" kind="show" identifier="Go_to_VC_by_Segue" id="sy8-Do-cUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="15"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="iz1-0U-xhX">
+            <objects>
+                <viewController id="eKH-4v-P88" customClass="SecondVC" customModule="HomeWork12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSr-se-3Mh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="3Jx-44-I2y">
+                                <rect key="frame" x="25" y="404.5" width="364" height="141"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-vZ-4ls">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
+                                        <color key="backgroundColor" red="0.86527321820000003" green="1" blue="0.73425123530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coD-AB-ti3">
+                                        <rect key="frame" x="0.0" y="104" width="364" height="37"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goBack" destination="eKH-4v-P88" eventType="touchUpInside" id="aej-Fq-csl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1OW-CQ-2PL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Jx-44-I2y" firstAttribute="leading" secondItem="1OW-CQ-2PL" secondAttribute="leading" constant="25" id="NLg-wh-sJo"/>
+                            <constraint firstItem="1OW-CQ-2PL" firstAttribute="trailing" secondItem="3Jx-44-I2y" secondAttribute="trailing" constant="25" id="Ryq-aL-OQ6"/>
+                            <constraint firstItem="3Jx-44-I2y" firstAttribute="centerX" secondItem="1OW-CQ-2PL" secondAttribute="centerX" id="yt1-lb-WMb"/>
+                            <constraint firstItem="3Jx-44-I2y" firstAttribute="centerY" secondItem="1OW-CQ-2PL" secondAttribute="centerY" id="yud-b1-hfI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Ah-Du-pBe"/>
+                    <connections>
+                        <outlet property="textLbl" destination="dLe-vZ-4ls" id="xnp-EI-vZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlH-9f-Dfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="-106"/>
+        </scene>
+        <!--SecondStoryboard-->
+        <scene sceneID="gju-lx-2Lc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SecondStoryboard" id="7fq-zu-HQb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9i3-sH-2Ug"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ty1-6H-ZT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="269"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u8e-JB-y0S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UYJ-h1-LuF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B4w-i3-uEn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ur3-hS-MKb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNG-Tu-ZLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
